@@ -34,9 +34,19 @@ img {
   text-decoration: none;
   font-style: normal;
   color: var(--main-text-color);
+  
 }
-button {
-  font-family: inherit;
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 .section {
   padding-top: 94px;
@@ -84,10 +94,11 @@ button {
 }
 .contacts-nav {
   margin-left: auto;
+  display: flex;
 }
 
 .site-nav .item:not(:last-child),
-.contacts-nav .item:not(:last-child) {
+.contacts-item:not(:last-child) {
   margin-right: 50px;
 }
 
@@ -97,6 +108,23 @@ button {
   padding-bottom: 32px;
 
   color: var(--title-text-color);
+}
+/* .contacts-item {
+  display: flex;
+}
+
+.contacts-item::before {
+  content: "";
+  display: block;
+  min-height: 20px;
+
+  background-repeat: no-repeat;
+} */
+.phone::before {
+  background-image: url("../images/smartphone.svg");
+}
+.envelop::before {
+  background-image: url("../images/envelope.svg");
 }
 .contacts-nav .link {
   display: block;
@@ -109,7 +137,7 @@ button {
 .site-nav .link:hover,
 .site-nav .link:focus,
 .contacts-nav .link:hover,
-.contacts-nav .lonk:focus {
+.contacts-nav .link:focus {
   color: var(--accent-color);
 }
 
@@ -134,7 +162,7 @@ button {
   margin-top: 0;
   width: 696px;
 }
-.background {
+.hero-background {
   max-width: 1600px;
   max-height: 600px;
   margin-left: auto;
@@ -212,6 +240,10 @@ button {
 .job-list .item:not(:last-child) {
   margin-right: 30px;
 }
+
+.team-background {
+  background-color: var(--secondary-background-color);
+}
 .team-list {
   display: flex;
 }
@@ -234,10 +266,41 @@ button {
   width: 270px;
   padding-bottom: 30px;
   text-align: center;
+  border-radius: 0 0 4px 4px;
+  background-color: var(--primery-background-color);
+  box-shadow: 0 2px rgba(0, 0, 0, 0.2), 0 1px rgba(0, 0, 0, 0.14),
+    0 1px rgba(0, 0, 0, 0.12);
 }
 .team-container:not(:last-child) {
   margin-right: 30px;
 }
+
+.client-list {
+  display: flex;
+}
+.client-container {
+  min-width: 170px;
+  min-height: 92px;
+  border: 1px solid var(--secondary-background-color);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.client-container:not(:last-child) {
+  margin-right: 30px;
+}
+.client-container:hover,
+.client-container:focus {
+  border-color: var(--accent-color);
+  cursor: pointer;
+}
+.client-container.link {
+  display: block;
+  min-width: 170px;
+  min-height: 92px;
+}
+
 /* футер */
 .page-footer {
   background-color: var(--footer-hero-background-color);
@@ -267,6 +330,7 @@ button {
 
 /* кнопки */
 .button {
+  font-family: inherit;
   color: var(--title-text-color);
   background-color: var(--secondary-background-color);
   font-size: 16px;
