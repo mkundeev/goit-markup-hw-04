@@ -294,11 +294,13 @@ img {
   align-items: center;
   justify-content: center;
 }
-.team-sm-link:hover:hover {
+.team-sm-link:hover,
+.team-sm-link:focus {
   background-color: var(--accent-color);
   border-radius: 50%;
 }
-.team-sm-link:hover:hover .icon-social-media {
+.team-sm-link:hover .icon-social-media,
+.team-sm-link:focus .icon-social-media {
   fill: #ffffff;
 }
 .icon-social-media {
@@ -395,7 +397,7 @@ img {
   text-transform: uppercase;
   color: var(--primery-background-color);
   font-weight: 700;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.17;
   margin-bottom: 20px;
 }
@@ -410,7 +412,11 @@ img {
 .footer-sm .icon-social-media {
   fill: var(--primery-background-color);
 }
-
+.team-sm-link:hover,
+.team-sm-link:focus {
+  background-color: var(--accent-color);
+  border-radius: 50%;
+}
 /* кнопки */
 .button {
   font-family: inherit;
