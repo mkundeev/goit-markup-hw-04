@@ -269,8 +269,8 @@ img {
   text-align: center;
   border-radius: 0 0 4px 4px;
   background-color: var(--primery-background-color);
-  box-shadow: 0 2px rgba(0, 0, 0, 0.2), 0 1px rgba(0, 0, 0, 0.14),
-    0 1px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2), 0 1px 1px rgba(0, 0, 0, 0.14),
+    0 1px 3px rgba(0, 0, 0, 0.12);
 }
 .team-container:not(:last-child) {
   margin-right: 30px;
@@ -408,6 +408,15 @@ img {
 .button.main:hover {
   background-color: #188ce8;
 }
+.portfolio-btn:not(:last-child) {
+  margin-right: 8px;
+}
+.portfolio-btn:hover,
+.portfolio-btn:focus {
+  border-radius: 4px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.08),
+    0 3px 1px rgba(0, 0, 0, 0.1);
+}
 
 /* портфолио */
 
@@ -443,9 +452,6 @@ img {
   border-left: 1px solid #ececec;
   border-right: 1px solid #ececec;
 }
-.portfolio-btn:not(:last-child) {
-  margin-right: 8px;
-}
 
 .examples-list {
   display: flex;
@@ -458,6 +464,6 @@ img {
   margin-bottom: 30px;
 }
 .examples-container:hover {
-  box-shadow: 1px 4px rgba(0, 0, 0, 0.16), 0 4px rgba(0, 0, 0, 0.06),
-    0 1px rgba(0, 0, 0, 0.12);
+  box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.16), 0 4px 4px rgba(0, 0, 0, 0.06),
+    0 1px 1px rgba(0, 0, 0, 0.12);
 }
