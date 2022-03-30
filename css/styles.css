@@ -275,6 +275,7 @@ img {
 .team-container:not(:last-child) {
   margin-right: 30px;
 }
+/* -----------------------социальные сети-------------------------------------------------- */
 .team-sm-list {
   display: flex;
   min-height: 44px;
@@ -309,7 +310,7 @@ img {
 .team-sm-item:not(:last-child) {
   margin-right: 10px;
 }
-
+/* ---------------------Клиенты------------------------------------ */
 .client-list {
   display: flex;
 }
@@ -369,11 +370,45 @@ img {
 .footer-item:not(:last-child) {
   margin-bottom: 9px;
 }
-.addres-footer {
+.map-footer {
   color: var(--primery-background-color);
+}
+.address-footer {
+  display: inline-block;
+  min-width: 231px;
 }
 .contacts-footer {
   color: rgba(255, 255, 255, 0.6);
+}
+.page-footer .container {
+  display: flex;
+  align-items: flex-start;
+}
+.footer-sm {
+  min-height: 80px;
+  display: inline-block;
+  margin-left: 70px;
+  margin-top: 12px;
+}
+.footer-call {
+  display: inline-block;
+  text-transform: uppercase;
+  color: var(--primery-background-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.17;
+  margin-bottom: 20px;
+}
+.footer-sm .team-sm-list {
+  padding-left: 0;
+  padding-right: 0;
+}
+.footer-sm .team-sm-link {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+.footer-sm .icon-social-media {
+  fill: var(--primery-background-color);
 }
 
 /* кнопки */
